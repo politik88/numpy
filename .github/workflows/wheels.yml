@@ -154,7 +154,7 @@ jobs:
           CIBW_PRERELEASE_PYTHONS: True
           CIBW_BUILD: ${{ matrix.python }}-${{ matrix.buildplat[1] }}
 
-      - uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+      - uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4.4.0
         with:
           name: ${{ matrix.python }}-${{ matrix.buildplat[1] }}-${{ matrix.buildplat[2] }}
           path: ./wheelhouse/*.whl
@@ -235,7 +235,7 @@ jobs:
           python -mpip install twine
           twine check dist/*
 
-      - uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+      - uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4.4.0
         with:
           name: sdist
           path: ./dist/*
